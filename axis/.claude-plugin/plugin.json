@@ -1,0 +1,42 @@
+{
+  "name": "axis",
+  "description": "Prevent and fix technical debt with Sigrid: guardrails against new issues, and skills to diagnose and auto-fix existing ones.",
+  "author": {
+    "name": "Software Improvement Group"
+  },
+  "homepage": "https://docs.sigrid-says.com/integrations/integration-sigrid-mcp.html",
+  "repository": "https://github.com/Software-Improvement-Group/agent-integrations",
+  "license": "Apache-2.0",
+  "userConfig": {
+    "sigrid_token": {
+      "title": "Sigrid Token",
+      "description": "Sigrid API token (obtain from sigrid-says.com)",
+      "sensitive": true,
+      "required": true,
+      "type": "string"
+    },
+    "nudge_guardrails": {
+      "title": "Nudge to run guardrails",
+      "description": "Nudge Claude to run the Sigrid guardrails check on changed source files and fix any finding its change made worse, before reporting a task done.",
+      "required": false,
+      "type": "boolean",
+      "default": true
+    },
+    "nudge_architecture_explorer": {
+      "title": "Nudge to use architecture-explorer",
+      "description": "Nudge Claude to prefer the architecture-explorer agent over the generic Explorer subagent.",
+      "required": false,
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "mcpServers": {
+    "axis": {
+      "type": "http",
+      "url": "https://sigrid-says.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.sigrid_token}"
+      }
+    }
+  }
+}
