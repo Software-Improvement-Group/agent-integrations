@@ -11,8 +11,8 @@ description: >
 # Sigrid setup
 
 Writes `.sigrid/profile.md` at the repository root (`git rev-parse --show-toplevel`). It is
-committed, so the whole team shares one profile per repo. `profile-template.md` next to this file
-is the structure: its sections and field list drive both the interview and the file you write.
+committed, so the whole team shares one profile per repo. It holds values only; the skills that
+read it know what each field means.
 
 ## Procedure
 
@@ -38,13 +38,34 @@ is the structure: its sections and field list drive both the interview and the f
      alphanumeric, at least 2 characters; system is lowercase alphanumeric segments separated by
      hyphens. Ask again if a value doesn't fit.
    - **Branch naming**: confirm the inferred pattern, or ask whether they want one.
-   - **Findings models**, only if the user uses a non-default security or reliability model.
+   - **Findings models**, only if the user uses a non-default security model (`ow10`, `sigsec`,
+     `pci4`, `owasvs4c`; default OWASP Top-10) or reliability model (`sigrel`, `5055rel`; default
+     SIG Code Reliability Top-10).
 
    Then, lightly, ask whether they want to customize any skill behavior. Capture only what they
    volunteer; the defaults are fine.
 
-5. **Write** `.sigrid/profile.md` in the template's structure. Then show what was recorded and
-   where each value came from, and say the file should be committed.
+5. **Write** `.sigrid/profile.md` with only the fields that have a value. Leave out anything
+   blank or default, and add the behavior section only when the user gave preferences:
+
+   ```markdown
+   # Sigrid profile
+
+   - **Customer**: acme
+   - **System**: backend-api
+   - **Baseline branch**: main
+   - **Source root**: .
+   - **Branch naming**: fix/<area>
+   - **Security model**: sigsec
+   - **Reliability model**: 5055rel
+
+   ## Customizing behavior
+
+   - Never touch `generated/`.
+   ```
+
+   Then show what was recorded and where each value came from, and say the file should be
+   committed.
 
 ## Notes
 

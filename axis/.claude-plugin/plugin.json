@@ -4,7 +4,7 @@
   "author": {
     "name": "Software Improvement Group"
   },
-  "homepage": "https://docs.sigrid-says.com/integrations/integration-sigrid-mcp.html",
+  "homepage": "https://docs.sigrid-says.com/axis/",
   "repository": "https://github.com/Software-Improvement-Group/agent-integrations",
   "license": "Apache-2.0",
   "userConfig": {

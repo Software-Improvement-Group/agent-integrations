@@ -19,7 +19,7 @@ With no argument it runs maintainability, open-source, and security.
 - Customer and system in `.sigrid/profile.md` (`/axis:setup`), or stated in the prompt
 - For the Sigrid CI models:
   - `SIGRID_CI_TOKEN` or `SIGRID_TOKEN` environment variable
-  - Python 3.7+
+  - Python 3.9+
   - Network access to `github.com` to clone the sigridci scripts, or a local clone named in your
     prompt
   - Network access to `sigrid-says.com`

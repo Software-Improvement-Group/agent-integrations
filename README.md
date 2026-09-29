@@ -1,7 +1,7 @@
 # Sigrid Axis Agent Integrations
 
 A Claude Code plugin marketplace for Sigrid Axis
-([documentation](https://docs.sigrid-says.com/integrations/integration-sigrid-mcp.html)). Sigrid Axis
+([documentation](https://docs.sigrid-says.com/axis/)). Sigrid Axis
 brings Sigrid's analysis to AI coding assistants, agents, and other MCP-based tools:
 
 - *Guardrails*: Sigrid checks the code an assistant writes, so it doesn't introduce security or
@@ -62,7 +62,7 @@ off: `/plugin` → `Installed` → `axis` → `Configure options` → `Nudge to 
 ## Usage
 
 For MCP usage, see the
-[Sigrid MCP documentation](https://docs.sigrid-says.com/integrations/integration-sigrid-mcp.html).
+[Sigrid Axis MCP tools documentation](https://docs.sigrid-says.com/axis/tools.html).
 Each skill has a `README.md` under [`axis/skills/`](axis/skills/).
 
 ## Customization
