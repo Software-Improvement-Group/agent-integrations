@@ -14,7 +14,7 @@ description: >
 # Triage findings
 
 Triage covers the findings-based models: it goes through a list of findings and decides each. It
-never changes code; `/axis:autofix <model>` fixes what triage decided to fix. Opening issues is up
+never changes code; `/autofix <model>` fixes what triage decided to fix. Opening issues is up
 to whoever runs the skill.
 
 ## Which model
@@ -22,12 +22,12 @@ to whoever runs the skill.
 Take it from `$ARGUMENTS` or the request. None named: ask, security, reliability, or open-source.
 
 Metrics-based models (maintainability, architecture) are a state to diagnose, not a list to go
-through. Say that in one line and hand off to `/axis:diagnose <model>`.
+through. Say that in one line and hand off to `/diagnose <model>`.
 
 ## Context
 
 Customer, system, baseline branch, and the findings models come from `.sigrid/profile.md` at the
-repository root, or from the request. Missing: ask, suggest `/axis:setup`, and write the answer
+repository root, or from the request. Missing: ask, suggest `/setup`, and write the answer
 back to the profile. Apply any behavior guidance the profile records.
 
 Then follow the model's reference file:
@@ -43,4 +43,4 @@ Report every finding with its decision, and list separately every finding that n
 failed to resolve. Nobody else is looking at Sigrid at the end of this run.
 
 When there is something to fix, write and offer a handover as described in
-`../../references/handover.md`, carrying what the model's reference file asks for.
+`../autofix/references/handover.md`, carrying what the model's reference file asks for.

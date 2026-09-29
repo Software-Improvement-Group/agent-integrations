@@ -2,7 +2,8 @@
 
 Makes the structural fix that `/axis:diagnose architecture` named: moves or splits files, adds a
 facade, reroutes calls, fixes imports, and verifies against Sigrid's numbers. Read the shared
-`architecture-graph.md` first: it says what Sigrid counts and how each mechanism moves each number.
+`../../diagnose/references/architecture-graph.md` first: it says what Sigrid counts and how each
+mechanism moves each number.
 
 ## Input
 

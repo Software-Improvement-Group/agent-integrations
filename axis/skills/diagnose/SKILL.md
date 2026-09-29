@@ -21,21 +21,21 @@ most worth making.
 Take it from `$ARGUMENTS` or the request. None named: ask, maintainability or architecture.
 
 Findings-based models (security, reliability, open-source) are a list to go through, not a state to
-diagnose. Say that in one line and hand off to `/axis:triage-findings <model>`.
+diagnose. Say that in one line and hand off to `/triage-findings <model>`.
 
 ## Context
 
 Customer, system, and baseline branch come from `.sigrid/profile.md` at the repository root, or
-from the request. Missing: ask, suggest `/axis:setup`, and write the answer back to the profile.
+from the request. Missing: ask, suggest `/setup`, and write the answer back to the profile.
 Apply any behavior guidance the profile records.
 
 Then follow the model's reference file:
 
 - maintainability: `references/maintainability.md`
 - architecture: `references/architecture.md`, which reads
-  `../../references/architecture-graph.md`
+  `references/architecture-graph.md`
 
 ## Closing
 
 When there is something to fix, write and offer a handover as described in
-`../../references/handover.md`, carrying what the model's reference file asks for.
+`../autofix/references/handover.md`, carrying what the model's reference file asks for.

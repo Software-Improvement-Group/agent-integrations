@@ -72,5 +72,5 @@ read it know what each field means.
 - This skill only reads the repo and writes the profile. It never changes project code or calls
   the Sigrid MCP.
 - Never store the Sigrid API token in the profile. The MCP token is plugin config in the OS
-  keychain. `/axis:change-feedback` runs Sigrid CI locally and reads a separate `SIGRID_CI_TOKEN`
+  keychain. `/change-feedback` runs Sigrid CI locally and reads a separate `SIGRID_CI_TOKEN`
   (or `SIGRID_TOKEN`) environment variable the user exports themselves.

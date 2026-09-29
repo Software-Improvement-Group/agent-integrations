@@ -2,7 +2,7 @@
 name: architecture-drift
 disable-model-invocation: true
 description: >
-  Alias for /axis:change-feedback architecture.
+  Alias for /change-feedback architecture.
 ---
 
-Run `/axis:change-feedback architecture` with `$ARGUMENTS`.
+Run `/change-feedback architecture` with `$ARGUMENTS`.

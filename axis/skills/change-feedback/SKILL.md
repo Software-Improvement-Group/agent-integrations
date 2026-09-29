@@ -20,7 +20,7 @@ With none named, run maintainability, open-source, and security, not architectur
 <!-- Include architecture in the default once architecture runs in Sigrid CI. -->
 
 Customer, system, and baseline branch come from `.sigrid/profile.md` at the repository root, or
-from the request. Missing: ask, suggest `/axis:setup`, and write the answer back to the profile.
+from the request. Missing: ask, suggest `/setup`, and write the answer back to the profile.
 
 ## How
 
