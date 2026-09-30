@@ -38,7 +38,9 @@ less). Both are legitimate.
 
 1. **Ratings.** unitSize, unitComplexity, unitInterfacing, duplication, moduleCoupling,
    componentIndependence, componentEntanglement, each 0.5–5.5 stars. Sort worst-first with the
-   gap to 4.0.
+   gap to 4.0. A missing rating was not measured; never act on it.
+   `componentEntanglement` is missing when Sigrid detects no calls between components (e.g. a
+   single component), which also puts `componentIndependence` at 5.5.
 2. **Findings for every property**, top 100 each, in parallel. Results are sorted by
    LOC-weighted contribution, so the first ones are the highest-impact.
 3. **Cross-reference.** A finding in 2+ property lists is higher leverage than one affecting a
