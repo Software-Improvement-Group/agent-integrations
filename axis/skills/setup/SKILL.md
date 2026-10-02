@@ -1,11 +1,10 @@
 ---
 name: setup
 description: >
-  Set up (or update) the Sigrid profile for this repository. Detects the Sigrid system from the
-  repo, asks the user for what's missing and any behavior preferences, then writes them to
-  `.sigrid/profile.md`, which the Axis skills read. Use when first installing the plugin in a repo,
-  when a skill reports the profile is missing, or when conventions change. Trigger on "set up
-  Sigrid", "configure Sigrid", "Sigrid onboarding", or "my Sigrid customer/system is ...".
+  Sets up or updates this repository's Sigrid profile (`.sigrid/profile.md`), which the other Axis
+  skills read: detects the Sigrid system and asks for what is missing and for behavior preferences.
+  Use when first using Axis in a repo, when a skill reports the profile is missing, or for "set up
+  /configure Sigrid Axis", "my Sigrid customer/system is ...".
 ---
 
 # Sigrid setup

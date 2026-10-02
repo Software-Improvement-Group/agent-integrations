@@ -2,14 +2,11 @@
 name: autofix
 argument-hint: "[maintainability|architecture|open-source|security|reliability] [handover path]"
 description: >
-  Fixes what /diagnose or /triage-findings planned, as local commits on a branch; never
-  pushes or opens change requests. Maintainability: refactors the ranked candidates, verified with
-  guardrails. Architecture: moves or splits files, adds a facade, reroutes calls, verified against
-  Sigrid's graph numbers. Security and reliability: fixes will-fix findings and updates their status
-  in Sigrid. Open-source: bumps or declares dependencies, verified with Sigrid CI. Works from a plan
-  handover in .sigrid/handovers/; with none, plans first. Use for "fix this",
-  "apply these improvements", "start refactoring", "implement the architecture fix", "fix these
-  findings", "fix dependencies", "update vulnerable packages", "fix this CVE", "apply the handover".
+  Fixes Sigrid findings as local commits on a branch, for any model; never pushes or opens change
+  requests. Security and reliability fixes also update the finding status in Sigrid. Works from
+  findings in the chat or a /diagnose or /triage-findings plan, and plans first when there is
+  neither. Use for "fix this", "fix these findings", "start refactoring", "implement the
+  architecture fix", "fix dependencies", "fix this CVE", "apply the handover".
 ---
 
 # Autofix
@@ -25,7 +22,7 @@ Take it from `$ARGUMENTS`, the handover, or the request. None named: ask which m
 
 In order:
 
-1. The handover a plan run in this chat just wrote.
+1. A handover or findings already in this chat: fix exactly those; given findings count as will-fix.
 2. An explicit handover path in the arguments (`.sigrid/handovers/...`).
 3. Exactly one open handover for the model (not `.done.md`): use it, and say so in one line.
 4. Several: ask which. List each with age and target, newest first; the last option is "run a

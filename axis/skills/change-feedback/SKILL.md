@@ -2,13 +2,11 @@
 name: change-feedback
 argument-hint: "[maintainability|architecture|open-source|security]"
 description: >
-  Sigrid's verdict on local changes before committing or pushing, without triggering a remote CI
-  pipeline or publishing anything to Sigrid. Maintainability, open-source health, and security run
-  Sigrid CI locally on the working tree; architecture checks the diff against Sigrid's measured
-  dependency graph for new cross-directory dependencies, bypassed facades, and new cycles. Trigger on
-  "run Sigrid on my changes", "check this before I push", "sigrid ci", "what would Sigrid say about
-  my current code", "does this change introduce bad coupling", "check my diff for architecture
-  drift", "did I bypass the facade", "is this new dependency safe".
+  Sigrid's verdict on local changes before committing or pushing, checked locally without
+  publishing anything to Sigrid. Covers maintainability, open-source health, security, and
+  architecture (new dependencies, bypassed facades, cycles). Use for "run Sigrid on my changes",
+  "check this before I push", "sigrid ci", "does this change introduce bad coupling", "check my diff
+  for architecture drift", "is this new dependency safe".
 ---
 
 # Change feedback

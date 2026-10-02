@@ -2,13 +2,10 @@
 name: triage-findings
 argument-hint: "[security|reliability|open-source]"
 description: >
-  Goes over a list of Sigrid findings for a findings-based model and decides each one: false
-  positive, risk accepted, needs a person, or will fix. Writes the decision back to Sigrid and lists
-  the findings that need a person's decision. Never changes code or opens issues. Security and
-  reliability: SAST findings. Open-source: dependency vulnerabilities, outdated, unlicensed,
-  abandoned, or unmanaged libraries. Use to "triage security findings", "work through the findings
-  backlog", "what should I do about this finding", "mark this as a false positive / accepted risk",
-  "which dependency risks should we act on", "go over our CVEs", "OSH findings", "dependency risk".
+  Triages findings in Sigrid — security, reliability, and open-source — and writes a decision back
+  for each: false positive, accepted risk, needs a person, or will fix. Never changes code or opens
+  issues; /autofix fixes whatever is marked will-fix. Use for "triage security findings", "work
+  through the findings backlog", "go over our CVEs", "mark this finding as a false positive".
 ---
 
 # Triage findings

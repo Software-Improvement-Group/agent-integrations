@@ -2,13 +2,11 @@
 name: diagnose
 argument-hint: "[maintainability|architecture]"
 description: >
-  Diagnoses a Sigrid system's state for a metrics-based model and names the one thing most worth
-  fixing. Maintainability: finds the property most worth fixing and the candidates driving it, or
-  reports that nothing qualifies. Architecture: finds the directory whose structure
-  is most worth fixing and names the concrete fix, or reports that nothing qualifies. Diagnoses
-  only; never changes code. Use for "what is our biggest maintainability problem", "where should we
-  start improving code quality", "why is our architecture rating low", "where should we improve our
-  architecture", "diagnose the architecture of <directory>".
+  Finds the one thing most worth fixing in a Sigrid system, or reports that nothing qualifies.
+  Maintainability: the property and the candidates driving it. Architecture: the directory and the
+  concrete fix. Never changes code; /autofix acts on its plan. Use for "what is our biggest
+  maintainability problem", "where should we start improving code quality", "why is our
+  architecture rating low", "diagnose the architecture of <directory>".
 ---
 
 # Diagnose
