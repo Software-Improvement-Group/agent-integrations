@@ -72,7 +72,7 @@ Then commit the candidate on its own.
   need this; if a fix turns out to need it anyway, skip the candidate.
 - Component-level properties (componentIndependence, componentEntanglement): make no code
   changes here. Diagnose only passes these on when nothing else qualified; surface the issue and
-  point to `/axis:diagnose architecture`.
+  point to `/diagnose architecture`.
 - Run the project's formatter/linter on changed files before reporting done — formatting is
   typically enforced by CI.
 - When a function or type signature changes, update every call site (constructor calls, factory

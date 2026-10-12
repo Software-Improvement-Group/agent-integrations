@@ -17,11 +17,12 @@ works too.
 | Skill | What it does |
 |-------|--------------|
 | `/axis:setup` | Writes the repo's Sigrid profile (`.sigrid/profile.md`: customer, system, conventions). **Run this first.** |
-| `/axis:change-feedback [maintainability\|architecture\|open-source\|security]` | Sigrid's verdict on local changes before you push: Sigrid CI run locally, or architecture drift against Sigrid's graph |
-| `/axis:explore-architecture` | Answers questions about the codebase structure with the `architecture-explorer` agent |
 | `/axis:diagnose [maintainability\|architecture]` | Reports the system's state for a metrics-based model and names the one fix most worth making. Never changes code |
 | `/axis:triage-findings [security\|reliability\|open-source]` | Goes over a list of findings: false positive, accepted, needs a person, or will fix. Never changes code |
 | `/axis:autofix [maintainability\|architecture\|open-source\|security\|reliability]` | Fixes what was planned, as local commits on a branch |
+| `/axis:architecture-drift` | Checks your diff against Sigrid's dependency graph for new dependencies, bypassed facades, and cycles. Same check as `/axis:change-feedback architecture` |
+| `/axis:explore-architecture` | Answers questions about the codebase structure with the `architecture-explorer` agent |
+| `/axis:change-feedback [maintainability\|architecture\|open-source\|security]` | Sigrid's verdict on local changes before you push: Sigrid CI run locally, or architecture drift against Sigrid's graph |
 
 Plan with `diagnose` or `triage-findings`, then fix with `autofix`, straight away or later. The plan
 is saved as a handover in `.sigrid/handovers/`. The skills stop at local commits and Sigrid
@@ -32,6 +33,14 @@ statuses. Pushing, change requests, and issues are up to you or your pipeline.
 Before Claude reports a task done, the plugin nudges it to run the guardrails check on the
 production code it changed and to fix what the change made worse. It's on by default. To turn it
 off: `/plugin` → `Installed` → `axis` → `Configure options` → `Nudge to run guardrails`.
+
+The plugin doesn't add an architecture check for you. To have Claude run one before every push,
+add this to your `CLAUDE.md`:
+
+```
+Before pushing code or opening a pull request, run the architecture-drift skill.
+If it reports drift, fix it, or explain why the new dependency is intended.
+```
 
 ## Prerequisites
 

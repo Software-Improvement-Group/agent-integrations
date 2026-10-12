@@ -3,7 +3,7 @@
 ## Goal
 
 Identify where maintainability can be improved and why, judge whether each candidate is really
-worth fixing, then stop before implementation: that belongs in `/axis:autofix maintainability`.
+worth fixing, then stop before implementation: that belongs in `/autofix maintainability`.
 
 Not all refactoring candidates are equal. Choosing the wrong one wastes effort on low-impact or
 high-risk changes. Reject the noise so autofix only ever sees high-leverage candidates.
@@ -51,7 +51,7 @@ less). Both are legitimate.
 
 `componentIndependence` and `componentEntanglement` are component-level and autofix does not
 change them. Only pick one when no other property has a qualifying candidate; then present it as a
-suggestion and point to `/axis:diagnose architecture`, which has the graph to diagnose it properly.
+suggestion and point to `/diagnose architecture`, which has the graph to diagnose it properly.
 
 ## Reject rules
 

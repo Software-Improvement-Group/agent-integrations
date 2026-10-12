@@ -1,6 +1,6 @@
 # Autofix architecture
 
-Makes the structural fix that `/axis:diagnose architecture` named: moves or splits files, adds a
+Makes the structural fix that `/diagnose architecture` named: moves or splits files, adds a
 facade, reroutes calls, fixes imports, and verifies against Sigrid's numbers. Read the shared
 `../../diagnose/references/architecture-graph.md` first: it says what Sigrid counts and how each
 mechanism moves each number.
@@ -55,7 +55,7 @@ Sigrid's tools describe the baseline and cannot see your branch, so you redo its
    actual call sites crossing each line in the working tree, per direction, as in Preflight 2.
    Compare with **Done when**. Not reached: say which number missed and by how much; do not
    soften the goal to fit.
-3. `/axis:change-feedback architecture` on the diff against the baseline: no new
+3. `/change-feedback architecture` on the diff against the baseline: no new
    cross-directory dependencies, no bypassed facade.
 4. `guardrails_quality_check` on the changed files.
 

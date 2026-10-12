@@ -1,7 +1,7 @@
 # Autofix open-source health
 
 Fixes the will-fix dependencies from the plan (purl, manifests, risks to clear, target version,
-direct/transitive/override, the researcher's alternatives). Needs `/axis:change-feedback` for
+direct/transitive/override, the researcher's alternatives). Needs `/change-feedback` for
 verification.
 
 Process dependencies one at a time. Each ends as exactly one commit, or reverted and reported as
@@ -12,7 +12,7 @@ Sigrid.
 
 1. Apply the bump or fix with ecosystem-appropriate mechanics, in every manifest listed.
 2. Run tests if a test command is available.
-3. **Verify with Sigrid CI** (mandatory): `/axis:change-feedback open-source` on the working
+3. **Verify with Sigrid CI** (mandatory): `/change-feedback open-source` on the working
    tree. It is the only way to confirm the finding is actually gone; unverified fixes are never
    committed. Still reported: try the next alternative version. None left: spawn the
    `osh-researcher` agent with the library, ecosystem, the versions already tried, and an

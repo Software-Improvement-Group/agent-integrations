@@ -1,6 +1,6 @@
 # Handovers
 
-A handover carries a plan from `/axis:diagnose` or `/axis:triage-findings` to `/axis:autofix`,
+A handover carries a plan from `/diagnose` or `/triage-findings` to `/autofix`,
 across sessions, worktrees, and people. The reader is a capable agent with zero context that cannot
 ask you anything: it can act on the handover alone or it is not done.
 
@@ -9,8 +9,8 @@ ask you anything: it can act on the handover alone or it is not done.
 At the end of a plan run, when there is something to fix, write the handover, then ask the
 user:
 
-- **Fix now** (default): continue in this chat with `/axis:autofix <model>` on this handover.
-- **Save for later**: the user can review and edit it, then run `/axis:autofix <model>` whenever
+- **Fix now** (default): continue in this chat with `/autofix <model>` on this handover.
+- **Save for later**: the user can review and edit it, then run `/autofix <model>` whenever
   they like, in this or a fresh session. Recommend this when the run was long.
 - **Stop**.
 

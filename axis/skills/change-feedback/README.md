@@ -13,6 +13,7 @@ With no argument it runs maintainability, open-source, and security.
   baseline branch) and checks each against Sigrid's measured dependency graph. A reference that
   matches an existing edge is clean. One that adds a dependency, closes a cycle, or bypasses a
   facade is drift, reported with the files it should route through instead.
+  The `architecture-drift` skill runs the same check.
 
 ## Prerequisites
 

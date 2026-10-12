@@ -89,7 +89,7 @@ Otherwise, write and offer a handover (the shared `handover.md`).
 
 ## Handover
 
-The reader is `/axis:autofix architecture`. It reads the code, chooses how to make the change, and
+The reader is `/autofix architecture`. It reads the code, chooses how to make the change, and
 checks its own work against the numbers you give it, so it looks these sections up by name, in
 this order:
 
