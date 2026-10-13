@@ -17,11 +17,11 @@ signal.**
 
 ## Prerequisites
 
-- Sigrid MCP available: `architecture_get_internal`, `architecture_get_external_dependencies`
+- Sigrid MCP available: `architecture_get_internal`, `architecture_get_external_deps`
 
   | MCP tool | Purpose |
   |---|---|
-  | `architecture_get_external_dependencies` | Incoming callers of a touched file — blast radius if its contract changes |
+  | `architecture_get_external_deps` | Incoming callers of a touched file — blast radius if its contract changes |
   | `architecture_get_internal` | Current dependency structure anchored on the touched files/directories |
 
   If either tool is unavailable, state which one and stop. Don't approximate the
@@ -42,7 +42,7 @@ Use a Sonnet subagent, with the customer, system, and diff scope, to do the foll
    cross-directory references found → stop and say so; don't spend MCP calls on a
    change that can't drift.
 2. Ground each candidate against the current structure via
-   `architecture_get_external_dependencies(customer, system, path=<touched file or
+   `architecture_get_external_deps(customer, system, path=<touched file or
    its common parent directory>, direction="all")` — one call per distinct group,
    capped at ~5 top-level directories (prioritize the groups with the most touched
    files or new references; report which directories were skipped).

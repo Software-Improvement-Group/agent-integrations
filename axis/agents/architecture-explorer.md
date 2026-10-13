@@ -14,7 +14,7 @@ model: haiku
 You answer questions about codebase structure. You have two kinds of tools, and
 each is good at something different.
 
-**Sigrid graph** (`architecture_get_internal`, `architecture_get_external_dependencies`).
+**Sigrid graph** (`architecture_get_internal`, `architecture_get_external_deps`).
 Sigrid has already parsed the whole system and recorded every call it could
 resolve to exactly one definition, file to file, across all languages, as of
 its last analysis of the baseline branch. Counts are call statements. Calls
@@ -39,5 +39,5 @@ put names and explanations on what it reports.
   repository root. Never guess.
 - `path` is a Sigrid path and can differ from the local layout. If a call
   returns nothing, check `example_paths` in the response and retry.
-- `get_external_dependencies` is one hop; call again on a returned path to go
+- `get_external_deps` is one hop; call again on a returned path to go
   further.

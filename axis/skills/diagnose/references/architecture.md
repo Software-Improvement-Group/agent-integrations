@@ -42,12 +42,12 @@ Tools describe Sigrid's last baseline analysis, never the working tree. Read sou
 the graph is silent and the answer decides the fix — a missing edge is unmeasured, not absent.
 
 Gotchas:
-- `architecture_get_worst_directories`: default `min_volume` (0.2 py) hides leaf dirs on small
+- `architecture_get_worst_dirs`: default `min_volume` (0.2 py) hides leaf dirs on small
   systems — lower to 0.01. Sigrid paths can differ from local layout; check `example_paths` if a
   path returns nothing.
 - `architecture_get_internal`: names are bare — resolve to full paths before comparing across
   results.
-- `architecture_get_external_dependencies`: capped at 50. If `truncated`, query per child —
+- `architecture_get_external_deps`: capped at 50. If `truncated`, query per child —
   arithmetic on a capped list is wrong.
 - `architecture-explorer`: describe what each child does, don't judge.
 
@@ -100,7 +100,7 @@ this order:
    sub-rating with its rating, and what the graph and describers showed: the responsibility
    groups with their members, the loose root files, or the neighbor the calls all run to. Then
    the baseline numbers per file involved: calls with the destination, with current siblings,
-   elsewhere, from `architecture_get_external_dependencies`. Note edges you expect the graph to
+   elsewhere, from `architecture_get_external_deps`. Note edges you expect the graph to
    be missing and whether the source confirmed them.
 4. **Plan** — the fix you predicted, as numbered steps, each with the expected effect on the
    numbers above. Mechanisms: move, split, facade with real calls, reroute or consolidate call
