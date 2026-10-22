@@ -12,7 +12,7 @@ yarn-error.log*
 .vscode/*
 .idea/
 .DS_Store
-/.claude/
+/.claude/*.local.json
 /.idea/
 
 # eval run artifacts (internal only, never published)
