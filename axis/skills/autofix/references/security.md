@@ -1,7 +1,7 @@
 # Autofix security findings
 
 Fixes the will-fix findings from the plan (`finding_id`, file:line, title, the fix to make). MCP
-tools: `get_finding`, `update_finding_status`, `guardrails_quality_check`.
+tools: `get_finding`, `update_finding`, `guardrails_quality_check`.
 
 ## For each finding
 
@@ -15,12 +15,15 @@ tools: `get_finding`, `update_finding_status`, `guardrails_quality_check`.
 A fix that turns out to need a design decision, a change to the auth or access-control decision
 itself, an action outside the working tree, an exported signature change, or edits in more than 3
 files: stop on that finding, revert it, and set it to
-`REFINED` with the blocker as remark, prefixed "Sigrid Auto-fix Agent:".
+`REFINED`. A remark replaces the whole existing one, so read the current remark with `get_finding`
+and write it back with the blocker appended, the blocker prefixed "Sigrid Auto-fix Agent:". That
+keeps triage's justification for the finding's scores.
 
 ## Promote to `FIXED`
 
 Committed findings stay on `WILL_FIX`. At the end, list them and ask whether to set them to
 `FIXED` now. Explain the trade-off: on `WILL_FIX`, a triage run before the branch is merged picks
-them up again; on `FIXED`, they must go back to `WILL_FIX` if the branch is not merged. Follow the
+them up again; on `FIXED`, they must go back to `WILL_FIX` if the branch is not merged. Send the
+status only, no remark, so the existing remark stays. Follow the
 profile instead of asking when it records a preference; waived, leave them on `WILL_FIX` and say
 so.

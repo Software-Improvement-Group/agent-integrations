@@ -4,7 +4,7 @@ MCP tools: `opensource_get_risks` (all six risk dimensions) and
 `opensource_get_vulnerabilities` (CVE detail). Use findings already in context when the user
 gave them; otherwise query, scoped to what the user asked for.
 
-Open Source Health has no status API: `update_finding_status` does not work for it. The decisions
+Open Source Health has no status API: `update_finding` does not work for it. The decisions
 live in the handover and the report — never try to mark findings in Sigrid.
 
 ## Group

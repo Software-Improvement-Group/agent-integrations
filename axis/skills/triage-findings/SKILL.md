@@ -33,6 +33,14 @@ Then follow the model's reference file:
 - reliability: `references/reliability.md`
 - open-source: `references/open-source.md`
 
+## Scoring
+
+Every security and reliability finding written back is scored, except false positives: the skill
+sets its Impact and Exploitability in Sigrid in the same call as its status, and Sigrid derives the
+severity from them. Never set severity directly. An accepted risk is accepted at that re-evaluated
+severity. Open-source findings are never scored (maintainability findings are not triaged here at
+all). The model's reference file says how.
+
 ## Closing
 
 Report every finding with its decision, and list separately every finding that needs a person

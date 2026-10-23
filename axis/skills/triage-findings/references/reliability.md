@@ -13,3 +13,7 @@ follow `security.md` next to this file, with these differences.
 - **Needs a person**: the security blockers that apply (design decision, action outside the working
   tree, unlocatable code path, exported signature, more than 3 files), plus a fix that would change
   observable behavior callers may rely on, such as error types or retry and timeout semantics.
+- **Score** with `reliability-scoring.md` instead of `cvss-scoring.md`, for every finding except a
+  false positive. The subagent returns the same labels and justification. The status scope,
+  writing status and scores in one call, the `INFORMATION` reclassification as accepted risk, and
+  the handover fields work as in `security.md`.
