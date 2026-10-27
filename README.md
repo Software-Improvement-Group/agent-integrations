@@ -31,8 +31,9 @@ statuses. Pushing, change requests, and issues are up to you or your pipeline.
 ### Guardrails nudge
 
 Before Claude reports a task done, the plugin nudges it to run the guardrails check on the
-production code it changed and to fix what the change made worse. It's on by default. To turn it
-off: `/plugin` → `Installed` → `axis` → `Configure options` → `Nudge to run guardrails`.
+production code it changed and to fix what the change made worse. The check takes your Sigrid
+customer and system from `.sigrid/profile.md`, so run `/axis:setup` first. It's on by default. To
+turn it off: `/plugin` → `Installed` → `axis` → `Configure options` → `Nudge to run guardrails`.
 
 The plugin doesn't add an architecture check for you. To have Claude run one before every push,
 add this to your `CLAUDE.md`:
